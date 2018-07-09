@@ -13,12 +13,69 @@
 	  s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
+	<style>
+		body{margin: 0;}
+		.header{background: #f5f5f5;}
+		.header-inner{position: relative;width: 700px;margin: 0 auto;padding: 25px 0 20px;}
+		.header-inner:before, .header-inner:after{content: " ";display: table;}
+		.header-inner:after{clear: both;}
+		.site-meta{float: left;margin-left: -20px;line-height: normal;text-align: left;}
+		.site-meta .brand{position: relative;display: inline-block;padding: 2px 1px;}
+		.logo-line-before, .logo-line-after{display: block;overflow: hidden;margin: 0 auto;width: 75%;}
+		.site-meta .site-title{position: relative;display: inline-block;vertical-align: top;line-height: 36px;font-size: 22px;font-weight: bolder;}
+		.site-subtitle{position: relative;margin-top: 10px;font-size: 13px;color: #999;}
+		.logo-line-before i, .logo-line-after i{position: relative;display: block;height: 2px;background: #222;}
+		.logo-line-before i{left: -100%;}
+		.logo-line-after i{right: -100%;}
+		.footer{min-height: 50px;margin-top: 80px;padding: 10px 0;background: #f5f5f5;color: #666;font-size: 14px;text-align: center;}
+		#book-list{
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+		}
+		a{
+			display: inline-block;
+			height: 26px;
+			margin-top: 20px;
+			padding: 0 8px;
+			border-radius: 6px;
+			line-height: 26px;
+			background: #f5f5f5;
+			font-size: 14px;
+			color: inherit;
+			text-decoration: none;
+		}
+		a:hover{
+			background: #ccc;
+		}
+	</style>
 </head>
 <body>
 	<div id="doc">
+	<header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+	    <div class="header-inner"><div class="site-brand-wrapper">
+			<div class="site-meta ">
+				<div class="custom-logo-site-title">
+					<a href="/" class="brand" rel="start" style="opacity: 1;">
+						<span class="logo-line-before"><i class="" style="transform: translateX(100%);"></i></span>
+						<span class="site-title" style="opacity: 1; top: 0px;">慢时光小栈</span>
+						<span class="logo-line-after"><i class="" style="transform: translateX(-100%);"></i></span>
+					</a>
+				</div>
+				<p class="site-subtitle" style="opacity: 1; top: 0px;">盛年不再来，一日难再晨。及时当勉励，岁月不待人。</p>
+			</div>
+		</div>
+    </header>
 		<ul id="book-list">
 		</ul>
 	</div>
+	<footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+				<span class="author" itemprop="copyrightHolder">简兮</span>
+			</div>
+		</div>
+	</footer>
 	<script src="data.js"></script>
 	<script>
 		window.onload = (function(){
