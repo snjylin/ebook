@@ -34,7 +34,11 @@
 		#book-list{
 			text-align: center;
 		}
-		#book-list a{margin-top: 20px;}
+		#book-list li{
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
 		a{
 			display: inline-block;
 			height: 26px;
@@ -77,6 +81,7 @@
 			</nav>
 		</div>
     </header>
+    <a href="./booklist.html" style="margin: 50px;background: #666;color: #fff;">书单</a>
 		<ul id="book-list">
 		</ul>
 	</div>
@@ -92,7 +97,7 @@
 		window.onload = (function(){
 			for(var i = 0; i < data.length; i++){
 				var li = document.createElement('li');
-				li.innerHTML = '<a href="/sources/kindle/' + data[i].title + '">' + data[i].title + '</a>';
+				li.innerHTML = '<a href="./sources/' + data[i].title + '" onclick="return false;">' + data[i].title + '</a>';
 				document.getElementById('book-list').append(li);
 			}
 		})(data);
